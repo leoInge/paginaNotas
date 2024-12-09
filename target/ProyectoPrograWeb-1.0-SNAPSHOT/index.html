@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignaturas</title>
+
+    <!-- Enlaces a hojas de estilo CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="Estilos.css">
+</head>
+<body onload="load()">
+<div class="container-fluid">
+    <div class="banner">
+        <!-- Imagen del banner -->
+        <img src="Banner.jpg">
+    </div>
+    <div class="fondo">
+        <div class="container">
+            <!-- Formulario para ingresar materias -->
+            <form>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1> Ingresar Materias</h1>
+                    </div>
+                    <!-- Campo de entrada para el código de la materia -->
+                    <div class="col-md-12">
+                        <label for="codigo" class="form-label">Codigo</label>
+                        <input type="text" class="form-control" id="codigo" placeholder="0123">
+                    </div>
+                    <!-- Campo de entrada para el nombre de la materia -->
+                    <div class="col-md-12">
+                        <label for="asignatura" class="form-label">Materia</label>
+                        <input type="text" class="form-control" id="asignatura" placeholder="Ingrese el nombre de la Asignatura">
+                    </div>
+                    <!-- Botón para ingresar la materia -->
+                    <div class="col-md-12 text-center"><br>
+                        <button id="btnCourse" class="btn btn-success w-50">Ingresar</button>
+                    </div>
+                </div>
+            </form>
+            <hr>
+            <!-- Formulario para ingresar actividades relacionadas con las materias -->
+            <form>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1>Ingresar Actividades</h1>
+                    </div>
+                    <!-- Campo de selección de asignatura -->
+                    <div class="col-md-12">
+                        <label for="ObAsignatura" class="form-label">Asignatura</label>
+                        <select id="ObAsignatura" class="form-select"></select>
+                    </div>
+                    <!-- Campos de entrada para la actividad, tipo, ponderado y fecha -->
+                    <div class="col-md-12">
+                        <label for="actividad" class="form-label">Actividad</label>
+                        <input type="text" class="form-control" id="actividad" placeholder="Ingrese la actividad">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="tipo" class="form-label">Tipo</label>
+                        <select id="tipo" class="form-select">
+                            <option value="0">Selección...</option>
+                            <option>Evaluacion</option>
+                            <option>Taller</option>
+                            <option>Proyecto</option>
+                            <option>Exposicion</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="ponderado" class="form-label">Promedio</label>
+                        <input type="number" class="form-control" id="ponderado" placeholder="20%">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="fecha" class="form-label">Fecha de Entrega</label>
+                        <input type="date" class="form-control" id="fecha" placeholder="Ingrese la fecha de entrega">
+                    </div>
+                    <!-- Botón para agregar la actividad -->
+                    <div class="col-md-12 text-center"><br>
+                        <button id="btnActivity" type="submit" class="btn btn-success w-50">Agregar</button>
+                    </div>
+                </div>
+            </form>
+            <hr>
+            <!-- Sección para mostrar actividades y resultados -->
+            <h1>Actividades</h1>
+            <div class="row" id="row">
+                <div class="col-md-12 text-center">
+                    <h1 id="cod" style="text-align: center;"></h1>
+                </div>
+            </div>
+            <hr>
+            <h1>Resultado del Desarrollo de Actividades</h1>
+            <div>
+                <!-- Tabla para mostrar resultados -->
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th colspan="2" id="tHead" style="text-align: center;"></th>
+                    </tr>
+                    <tr>
+                        <th>Asignatura</th>
+                        <th>Nota Definitiva</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tBody"></tbody>
+                </table>
+            </div>
+            <div id="row2">Promedio</div>
+        </div>
+    </div>
+</div>
+<!-- Enlaces a scripts JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+<script src="Scripts.js"></script>
+</body>
+</html>

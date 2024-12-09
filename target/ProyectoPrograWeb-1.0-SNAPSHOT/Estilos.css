@@ -1,0 +1,61 @@
+/* Add custom styles to override Bootstrap and existing styles */
+
+/* Change background color */
+body {
+	background-color: #f2f2f2;
+}
+
+/* Change banner styling */
+.banner img {
+	width: 100%;
+	height: auto;
+}
+
+/* Style the form elements */
+.form-control {
+	border-radius: 0;
+	border-color: #3498db;
+}
+
+/* Cambia el color de los botones a azul */
+.btn-success {
+	background-color: #0320ff; /* Cambia este color al tono de azul que desees */
+	border-color: #0320ff;
+	color: #fff;
+}
+
+
+/* Add padding to headings */
+h1, h2, h3 {
+	padding: 10px;
+}
+
+/* Style the table */
+.table {
+	border: 1px solid #3498db;
+	background-color: #fff;
+}
+
+/* Style table headers */
+.table thead th {
+	background-color: #3498db;
+	color: #fff;
+}
+
+/* Style table rows */
+.table tbody tr:hover {
+	background-color: #f2f2f2;
+}
+
+/* Center align text within tables */
+.table td, .table th {
+	text-align: center;
+}
+
+/* Style the "Promedio" element */
+#row2 {
+	background-color: #e74c3c;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
